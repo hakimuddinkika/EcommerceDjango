@@ -1,0 +1,37 @@
+1. Create the Base folder Ecommerce
+2. Goto CMD Terminal
+3. Install the Virtual Environment
+	python -m venv venv
+4. Activate the Virtual Environment
+	venv\Scripts\Activate
+5. Now Install the django
+	pip install django
+6. Start New Project (NOTE : If you put SPACE and DOT at the last it will create project (core) in base folder and not in additional folder)
+	django-admin startproject core .
+7. Start New APP as Store
+	python manage.py startapp store
+
+8. As this is a Ecommerce Project and we are storing Images in Product Table so we need to install Pillow Package to use ImageField
+	pip install pillow
+
+9. After doing changed in models.py inside APP(store/models.py) then run
+	python manage.py makemigrations
+
+10. Install MySQL Client
+	pip install mysqlclient
+
+11. By Default Django gives Support for DBSqlite3 so to Add MySQL localhost goto Project(core/settings.py) replace database with below
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_ecommerce',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
+}
+
+12. CMD - Run this code to migrate 
+	python manage.py migrate
