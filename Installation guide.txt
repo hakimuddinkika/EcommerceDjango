@@ -35,3 +35,16 @@ DATABASES = {
 
 12. CMD - Run this code to migrate 
 	python manage.py migrate
+
+
+13. Install coverage - It search in full folder where Tests are required
+	pip install coverage
+
+
+14. create urls.py inside app.
+
+15. Include the above urls.py inside the project(core) urls.py
+
+16. Then Create templates in base dir and inside create folder for each app.
+
+17. Include template folder url in settings.py
